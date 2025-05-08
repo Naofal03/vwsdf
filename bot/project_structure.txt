@@ -1,0 +1,31 @@
+# Structure du projet pour un robot de trading intégré à MetaTrader 5
+
+# Dossiers principaux
+- **bot/** : Contient le code principal du robot.
+  - **analysis/** : Scripts pour l'analyse fondamentale, technique et mathématique.
+    - `fundamental_analysis.py` : Analyse des actualités et des données fondamentales.
+    - `technical_analysis.py` : Calcul des indicateurs techniques et tracés.
+    - `mathematical_model.py` : Modèles mathématiques pour les prédictions.
+  - **mt5_integration/** : Scripts pour l'intégration avec MetaTrader 5.
+    - `mt5_connection.py` : Gestion de la connexion à MT5.
+    - `order_execution.py` : Gestion des ordres d'achat/vente.
+    - `chart_tracing.mq5` : Indicateur MQL5 pour les tracés dynamiques.
+  - **notion_integration/** : Scripts pour l'intégration avec Notion.
+    - `notion_api.py` : Gestion des interactions avec l'API de Notion.
+    - `trade_journal.py` : Automatisation du journal de trading.
+  - **utils/** : Fonctions utilitaires communes.
+    - `config.py` : Configuration globale (API keys, paramètres).
+    - `logger.py` : Gestion des logs.
+
+# Fichiers principaux
+- `main.py` : Point d'entrée principal du robot. Coordonne les analyses, les décisions et les actions.
+- `requirements.txt` : Liste des dépendances Python nécessaires.
+- `README.md` : Documentation du projet.
+
+# Autres dossiers
+- **tests/** : Contient les tests unitaires et d'intégration.
+  - `test_mt5_integration.py` : Tests pour l'intégration MT5.
+  - `test_analysis.py` : Tests pour les modules d'analyse.
+- **data/** : Stockage des données locales (temporaire ou historique).
+  - `historical_data/` : Données historiques pour le backtesting.
+  - `logs/` : Fichiers de logs générés par le robot.
